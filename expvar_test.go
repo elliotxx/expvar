@@ -1,8 +1,6 @@
 package expvar
 
 import (
-	"fmt"
-	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -23,7 +21,5 @@ func TestHandler(t *testing.T) {
 	router.GET("/debug/vars", Handler())
 
 	w := performRequest(router, "GET", "/debug/vars")
-	d, _ := ioutil.ReadAll(w.Body)
-	fmt.Println(string(d))
 	assert.Equal(t, w.Code, 200)
 }
