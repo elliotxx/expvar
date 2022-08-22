@@ -1,9 +1,9 @@
 # expvar
 
-[![Run Tests](https://github.com/gin-contrib/expvar/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/gin-contrib/expvar/actions/workflows/go.yml)
-[![codecov](https://codecov.io/gh/gin-contrib/expvar/branch/master/graph/badge.svg)](https://codecov.io/gh/gin-contrib/expvar)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gin-contrib/expvar)](https://goreportcard.com/report/github.com/gin-contrib/expvar)
-[![GoDoc](https://godoc.org/github.com/gin-contrib/expvar?status.svg)](https://godoc.org/github.com/gin-contrib/expvar)
+[![Run Tests](https://github.com/elliotxx/expvar/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/elliotxx/expvar/actions/workflows/go.yml)
+[![codecov](https://codecov.io/gh/elliotxx/expvar/branch/master/graph/badge.svg)](https://codecov.io/gh/elliotxx/expvar)
+[![Go Report Card](https://goreportcard.com/badge/github.com/elliotxx/expvar)](https://goreportcard.com/report/github.com/elliotxx/expvar)
+[![GoDoc](https://godoc.org/github.com/elliotxx/expvar?status.svg)](https://godoc.org/github.com/elliotxx/expvar)
 
 A expvar handler for gin framework, [expvar](https://golang.org/pkg/expvar/) provides a standardized interface to public variables.
 
@@ -14,13 +14,13 @@ A expvar handler for gin framework, [expvar](https://golang.org/pkg/expvar/) pro
 Download and install it:
 
 ```sh
-go get github.com/gin-contrib/expvar
+go get github.com/elliotxx/expvar
 ```
 
 Import it in your code:
 
 ```go
-import "github.com/gin-contrib/expvar"
+import "github.com/elliotxx/expvar"
 ```
 
 ### Canonical example
@@ -31,7 +31,7 @@ package main
 import (
   "log"
 
-  "github.com/gin-contrib/expvar"
+  "github.com/elliotxx/expvar"
   "github.com/gin-gonic/gin"
 )
 

@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/gin-contrib/expvar"
+	"github.com/elliotxx/expvar"
 	"github.com/gin-gonic/gin"
 )
 

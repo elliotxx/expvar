@@ -1,4 +1,4 @@
-module github.com/gin-contrib/expvar
+module github.com/elliotxx/expvar
 
 go 1.13
 

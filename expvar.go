@@ -1,8 +1,8 @@
 package expvar
 
 import (
+	"encoding/json"
 	"expvar"
-	"fmt"
 
 	"github.com/gin-gonic/gin"
 )
@@ -12,16 +12,17 @@ func Handler() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		w := c.Writer
 		c.Header("Content-Type", "application/json; charset=utf-8")
-		_, _ = w.Write([]byte("{\n"))
-		first := true
+		result := map[string]interface{}{}
 		expvar.Do(func(kv expvar.KeyValue) {
-			if !first {
-				_, _ = w.Write([]byte(",\n"))
+			v := map[string]interface{}{}
+			if err := json.Unmarshal([]byte(kv.Value.String()), &v); err == nil {
+				result[kv.Key] = v
+			} else {
+				result[kv.Key] = kv.Value.String()
 			}
-			first = false
-			fmt.Fprintf(w, "%q: %s", kv.Key, kv.Value)
 		})
-		_, _ = w.Write([]byte("\n}\n"))
+		data, _ := json.MarshalIndent(result, "", "    ")
+		_, _ = w.Write(data)
 		c.AbortWithStatus(200)
 	}
 }
