@@ -5,7 +5,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/elliotxx/expvar)](https://goreportcard.com/report/github.com/elliotxx/expvar)
 [![GoDoc](https://godoc.org/github.com/elliotxx/expvar?status.svg)](https://godoc.org/github.com/elliotxx/expvar)
 
-A expvar handler for gin framework, [expvar](https://golang.org/pkg/expvar/) provides a standardized interface to public variables.
+A expvar handler with pretty output format for gin framework, [expvar](https://golang.org/pkg/expvar/) provides a standardized interface to public variables.
 
 ## Usage
 
